@@ -14,18 +14,28 @@
 
 <script>
 export default {
-  name: "PageLayout"
+  name: "PageLayout",
 };
 </script>
 
 <style lang="scss" module>
-  .root {
-    position: relative;
-
-    .header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
+.root {
+  .header,
+  .footer {
+    width: 100%;
   }
+
+  .header {
+    height: var(--header-height);
+  }
+
+  .main {
+    width: 100%;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
+
+  .footer {
+    height: var(--footer-height);
+  }
+}
 </style>
