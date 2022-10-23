@@ -26,16 +26,18 @@ export default {
   }
 
   .header {
-    height: var(--header-height);
+    height: var(--sizes-header-height);
   }
 
   .main {
     width: 100%;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    min-height: calc(
+      100vh - var(--sizes-header-height) - var(--sizes-footer-height)
+    );
   }
 
   .footer {
-    height: var(--footer-height);
+    height: var(--sizes-footer-height);
   }
 }
 </style>

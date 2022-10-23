@@ -1,0 +1,11 @@
+:root {
+  --typo-font-family-default: 'Roboto', sans-serif;
+
+  --typo-font-size-xl: 48px;
+  --typo-font-size-l: 40px;
+  --typo-font-size-m: 20px;
+  --typo-font-size-s: 12px;
+  --typo-font-size-xs: 10px;
+
+  --type-font-weight-xl: 800;
+}

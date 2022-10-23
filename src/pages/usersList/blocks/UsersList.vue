@@ -1,7 +1,7 @@
 <template>
   <UsersListLayout>
     <template #title>
-      <p>title</p>
+      <UsersListTitle>Top Users</UsersListTitle>
     </template>
     <template #content>
       <p>{{ usersList }}</p>
@@ -12,11 +12,13 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 import UsersListLayout from "@/pages/usersList/components/UsersListLayout.vue";
+import UsersListTitle from "@/pages/usersList/components/UsersListTitle.vue";
 
 export default {
   name: "TopUsers",
 
   components: {
+    UsersListTitle,
     UsersListLayout,
   },
 
