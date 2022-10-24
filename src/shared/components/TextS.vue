@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: "UsersListTitle",
+  name: "TextS",
 };
 </script>
 
 <style lang="scss" module>
 .root {
-  font-size: var(--typo-font-size-xl);
-  font-weight: var(--type-font-weight-xl);
+  display: inline-block;
+  font-size: var(--typo-font-size-s);
 }
 </style>

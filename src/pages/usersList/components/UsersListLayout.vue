@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.root">
-    <div :class="$style.title">
+    <h1 :class="$style.title">
       <slot name="title" />
-    </div>
+    </h1>
     <div :class="$style.content">
       <slot name="content" />
     </div>
@@ -23,6 +23,10 @@ export default {
   .title {
     margin: 60px 0 60px;
     text-align: center;
+  }
+
+  .content {
+    padding: 0 86px 160px;
   }
 }
 </style>

@@ -1,39 +1,26 @@
 <template>
   <UsersListLayout>
     <template #title>
-      <UsersListTitle>Top Users</UsersListTitle>
+      <TextXL>Top Users</TextXL>
     </template>
     <template #content>
-      <p>{{ usersList }}</p>
+      <UsersListContent />
     </template>
   </UsersListLayout>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
 import UsersListLayout from "@/pages/usersList/components/UsersListLayout.vue";
-import UsersListTitle from "@/pages/usersList/components/UsersListTitle.vue";
+import UsersListContent from "@/pages/usersList/blocks/UsersListContent.vue";
+import TextXL from "@/shared/components/TextXL.vue";
 
 export default {
-  name: "TopUsers",
+  name: "UsersList",
 
   components: {
-    UsersListTitle,
+    TextXL,
+    UsersListContent,
     UsersListLayout,
-  },
-
-  methods: {
-    ...mapActions(["getUsersList"]),
-  },
-
-  computed: {
-    ...mapGetters(["usersList"]),
-  },
-
-  mounted() {
-    this.getUsersList(10);
   },
 };
 </script>
-
-<style scoped></style>
