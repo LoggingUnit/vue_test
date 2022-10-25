@@ -25,15 +25,18 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getUsersList"]),
+    ...mapActions("usersListModule", ["getUsersList"]),
   },
 
   computed: {
-    ...mapGetters(["usersSearchResultsList", "isSearchReturnNoResult"]),
+    ...mapGetters("usersListModule", [
+      "usersSearchResultsList",
+      "isSearchReturnNoResult",
+    ]),
   },
 
   mounted() {
-    this.getUsersList(1000);
+    this.getUsersList(25);
   },
 };
 </script>

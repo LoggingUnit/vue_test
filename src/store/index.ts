@@ -1,24 +1,18 @@
 import type { InjectionKey } from "vue";
 import { createStore, useStore as baseUseStore, Store } from "vuex";
-import actions from "@/store/actions";
-import mutations from "@/store/mutations";
-import getters from "@/store/getters";
-import state from "@/store/state";
-import type { IUser } from "@/models/IUser";
+import usersListModule from "@/store/UsersListModule";
+import type { IUsersListModuleState } from "@/store/UsersListModule/state";
 
-export interface State {
-  usersList: IUser[];
-  usersSearch: string;
-  isLoading: boolean;
+export interface IState {
+  usersListModule: IUsersListModuleState;
 }
 
-export const key: InjectionKey<Store<State>> = Symbol();
+export const key: InjectionKey<Store<IState>> = Symbol();
 
-export const store = createStore<State>({
-  state,
-  mutations,
-  actions,
-  getters,
+export const store = createStore<IState>({
+  modules: {
+    usersListModule,
+  },
 });
 
 export function useStore() {

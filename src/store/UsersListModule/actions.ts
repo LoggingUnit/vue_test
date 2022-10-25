@@ -3,7 +3,7 @@ import {
   GET_USERS_LIST_REQUEST,
   GET_USERS_LIST_SUCCESS,
   SET_USERS_SEARCH,
-} from "@/store/actionTypes";
+} from "@/store/UsersListModule/actionTypes";
 
 export default {
   getUsersList: ({ commit }: { commit: Function }, payload: number) => {

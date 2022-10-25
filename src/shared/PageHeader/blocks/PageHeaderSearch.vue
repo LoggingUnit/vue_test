@@ -14,11 +14,11 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["usersSearch"]),
+    ...mapGetters("usersListModule", ["usersSearch"]),
   },
 
   methods: {
-    ...mapActions(["setUsersSearch"]),
+    ...mapActions("usersListModule", ["setUsersSearch"]),
 
     onSearchInput(e) {
       this.setUsersSearch(e);
