@@ -1,4 +1,4 @@
-import type { IUser } from "@/models/IUser";
+import type { IUserOverview } from "@/models/IUserOverview";
 import type { IUsersListModuleState } from "@/store/UsersListModule/state";
 
 export default {
@@ -11,8 +11,8 @@ export default {
   usersSearchResultsList: (
     state: IUsersListModuleState,
     getters: any
-  ): IUser[] => {
-    const usersList: IUser[] = state.usersList;
+  ): IUserOverview[] => {
+    const usersList: IUserOverview[] = state.usersList;
 
     return getters.usersSearch
       ? usersList.filter(({ login }) =>

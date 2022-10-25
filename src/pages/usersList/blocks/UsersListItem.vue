@@ -16,14 +16,14 @@
 import { defineComponent } from "vue";
 import type { PropType } from "vue";
 import UsersListItemLayout from "../components/UsersListItemLayout.vue";
-import type { IUser } from "@/models/IUser";
+import type { IUserOverview } from "@/models/IUserOverview";
 import AvatarCircle from "@/shared/components/AvatarCircle.vue";
 import UsersListItemLink from "@/pages/usersList/blocks/UsersListItemLink.vue";
 import UsersListItemUsername from "@/pages/usersList/blocks/UsersListItemUsername.vue";
 
 export default defineComponent({
   props: {
-    user: Object as PropType<IUser>,
+    user: Object as PropType<IUserOverview>,
   },
 
   name: "UsersListItem",

@@ -14,12 +14,23 @@
 
 <script lang="ts">
 import UserDetailsLayout from "@/pages/userDetails/components/UserDetailsLayout.vue";
+import { mapActions } from "vuex";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "UserDetails",
 
   components: {
     UserDetailsLayout,
   },
-};
+
+  methods: {
+    ...mapActions("userDetailsModule", ["getUserDetails"]),
+  },
+
+  mounted() {
+    const username = this.$route.params.login;
+    this.getUserDetails(username);
+  },
+});
 </script>

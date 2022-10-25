@@ -4,13 +4,13 @@ import {
   GET_USERS_LIST_SUCCESS,
   SET_USERS_SEARCH,
 } from "@/store/UsersListModule/actionTypes";
-import type { IUser } from "@/models/IUser";
+import type { IUserOverview } from "@/models/IUserOverview";
 import type { IUsersListModuleState } from "@/store/UsersListModule/state";
 
 export default {
   [GET_USERS_LIST_SUCCESS]: (
     state: IUsersListModuleState,
-    payload: IUser[]
+    payload: IUserOverview[]
   ) => {
     state.usersList = payload;
     state.isLoading = false;

@@ -1,7 +1,7 @@
-import type { IUser } from "@/models/IUser";
+import type { IUserOverview } from "@/models/IUserOverview";
 
 export interface IUsersListModuleState {
-  usersList: IUser[];
+  usersList: IUserOverview[];
   usersSearch: string;
   isLoading: boolean;
 }
