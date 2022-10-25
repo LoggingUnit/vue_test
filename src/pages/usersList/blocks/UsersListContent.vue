@@ -33,7 +33,7 @@ export default {
   },
 
   mounted() {
-    this.getUsersList(10);
+    this.getUsersList(1000);
   },
 };
 </script>
