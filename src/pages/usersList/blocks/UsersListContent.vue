@@ -1,20 +1,27 @@
 <template>
-  <UsersListContentLayout>
-    <UsersListItem v-for="user in usersList" :key="user.id" :user="user" />
+  <UsersListContentLayout v-if="!isSearchReturnNoResult">
+    <UsersListItem
+      v-for="user in usersSearchResultsList"
+      :key="user.id"
+      :user="user"
+    />
   </UsersListContentLayout>
+  <UsersListContentNotFound v-else />
 </template>
 
-<script>
+<script lang="ts">
 import { mapActions, mapGetters } from "vuex";
 import UsersListContentLayout from "@/pages/usersList/components/UsersListContentLayout.vue";
 import UsersListItem from "@/pages/usersList/blocks/UsersListItem.vue";
+import UsersListContentNotFound from "@/pages/usersList/blocks/UsersListContentNotFound.vue";
 
 export default {
   name: "UsersListContent",
 
   components: {
-    UsersListItem,
+    UsersListContentNotFound,
     UsersListContentLayout,
+    UsersListItem,
   },
 
   methods: {
@@ -22,7 +29,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["usersList"]),
+    ...mapGetters(["usersSearchResultsList", "isSearchReturnNoResult"]),
   },
 
   mounted() {

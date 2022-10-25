@@ -1,39 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import { RouterView } from "vue-router";
 import PageLayout from "@/shared/components/PageLayout.vue";
-import Header from "@/shared/blocks/Header.vue";
-import Footer from "@/shared/blocks/Footer.vue";
+import PageHeader from "@/shared/PageHeader/blocks/PageHeader.vue";
+import PageFooter from "@/shared/PageFooter/blocks/PageFooter.vue";
 </script>
 
 <template>
-  <!--  <header>-->
-  <!--    <img-->
-  <!--      alt="Vue logo"-->
-  <!--      class="logo"-->
-  <!--      src="@/assets/logo.svg"-->
-  <!--      width="125"-->
-  <!--      height="125"-->
-  <!--    />-->
-
-  <!--    <div class="wrapper">-->
-  <!--      <HelloWorld msg="You did it!" />-->
-
-  <!--      <nav>-->
-  <!--        <RouterLink to="/">Home</RouterLink>-->
-  <!--        <RouterLink to="/about">About</RouterLink>-->
-  <!--      </nav>-->
-  <!--    </div>-->
-  <!--  </header>-->
   <PageLayout>
     <template #header>
-      <Header />
+      <PageHeader />
     </template>
     <template #main>
       <RouterView />
     </template>
     <template #footer>
-      <Footer />
+      <PageFooter />
     </template>
   </PageLayout>
 </template>
