@@ -42,6 +42,7 @@ export default {
 
   .avatar {
     width: 300px;
+    height: 300px;
   }
 
   .username {

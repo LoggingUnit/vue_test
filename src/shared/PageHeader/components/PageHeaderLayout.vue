@@ -23,14 +23,12 @@ export default {
   height: 100%;
   justify-content: space-between;
   background-color: var(--color-github-brand);
-
-  .title {
-    padding-left: 48px;
-  }
+  box-sizing: border-box;
+  padding: 0 48px;
 
   .search {
-    padding-right: 48px;
     width: 232px;
+    padding-right: 48px;
   }
 }
 </style>

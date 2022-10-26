@@ -18,5 +18,9 @@ export default defineComponent({
 .root {
   border-radius: 50%;
   width: 100%;
+  height: 100%;
+  background: var(--color-blue) url(public/duck-icon.svg) no-repeat;
+  background-size: 70% 70%;
+  background-position: 40% 40%;
 }
 </style>

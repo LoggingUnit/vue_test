@@ -27,6 +27,7 @@ export default {
 
   .avatar {
     width: 100%;
+    height: 140px;
     padding-bottom: 12px;
   }
 
