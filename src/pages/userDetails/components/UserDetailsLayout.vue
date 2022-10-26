@@ -43,5 +43,19 @@ export default {
   .avatar {
     width: 300px;
   }
+
+  .username {
+    text-transform: capitalize;
+  }
+
+  .repos {
+    width: 70%;
+  }
+
+  .backButton {
+    position: absolute;
+    left: 50px;
+    top: 70px;
+  }
 }
 </style>
