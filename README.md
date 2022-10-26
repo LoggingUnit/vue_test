@@ -2,7 +2,7 @@
 
 Project started with Vite.
 
-Please run npm i and npm run dev then as described above. 
+Please run npm i and npm run dev then as described below. 
 As soon as dev server is ready you will see link in terminal.
 
 good luck!
